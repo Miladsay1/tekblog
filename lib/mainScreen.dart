@@ -46,19 +46,17 @@ class _MainscreenState extends State<Mainscreen> {
         body: Padding(
           padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
           child: Stack(children: [
-            Center(
-              child: Positioned.fill(
-                  child: IndexedStack(
-                index: selectedPageIndex,
-                children: [
-                  HomeScreen(
-                      size: size, textTheme: textTheme, bodyMargin: bodyMargin),
-                  ProfilScreen(
-                      size: size, textTheme: textTheme, bodyMargin: bodyMargin),
-                  RegesterIntro(),
-                ],
-              )),
-            ),
+            Positioned.fill(
+                child: IndexedStack(
+              index: selectedPageIndex,
+              children: [
+                HomeScreen(
+                    size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+                ProfilScreen(
+                    size: size, textTheme: textTheme, bodyMargin: bodyMargin),
+                RegesterIntro(),
+              ],
+            )),
 
             // piade sazi hale zir bootonnavigitorbar
             NavigitorBottonHomepage(
