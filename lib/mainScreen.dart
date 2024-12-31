@@ -12,7 +12,9 @@ import 'package:tekblog/my_colors.dart';
 import 'package:tekblog/my_string.dart';
 
 class Mainscreen extends StatefulWidget {
-  const Mainscreen({super.key});
+  const Mainscreen(
+      BuildContext context, Size size, TextTheme textTheme, double bodyMargin,
+      {super.key});
 
   @override
   State<Mainscreen> createState() => _MainscreenState();

@@ -22,6 +22,8 @@ List<HashtagModel> tagList = [
   HashtagModel(title: "iot"),
 ];
 
+List<HashtagModel> mySelectetCats = [];
+
 List<BlogModel> blogList = [
   BlogModel(
       id: 1,

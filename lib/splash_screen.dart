@@ -15,9 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3)).then((value) {
+      var size = MediaQuery.of(context).size;
+      var textTheme = Theme.of(context).textTheme;
+      double bodyMargin = size.width / 12;
       // ignore: use_build_context_synchronously
-      Navigator.of(context).pushReplacement(
-          (MaterialPageRoute(builder: (context) => Mainscreen())));
+      Navigator.of(context).pushReplacement((MaterialPageRoute(
+          builder: (context) =>
+              Mainscreen(context, size, textTheme, bodyMargin))));
     });
 
     super.initState();

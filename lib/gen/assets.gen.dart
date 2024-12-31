@@ -32,6 +32,9 @@ class $AssetsImagesGen {
   AssetGenImage get avatarIcon =>
       const AssetGenImage('assets/images/avatarIcon.png');
 
+  /// File path: assets/images/felesh.svg
+  SvgGenImage get felesh => const SvgGenImage('assets/images/felesh.svg');
+
   /// File path: assets/images/hastag.png
   AssetGenImage get hastag => const AssetGenImage('assets/images/hastag.png');
 
@@ -75,6 +78,7 @@ class $AssetsImagesGen {
         mappingMetaverse02,
         moonrayTheFirstBitcoinMetaverseGameOnStacksRaises35M,
         avatarIcon,
+        felesh,
         hastag,
         homeicon,
         iconghalam,
