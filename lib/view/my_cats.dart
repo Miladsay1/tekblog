@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tekblog/gen/assets.gen.dart';
-import 'package:tekblog/view/mainScreen.dart';
-import 'package:tekblog/model/data_model.dart';
 import 'package:tekblog/model/fake_data.dart';
 import 'package:tekblog/component/my_colors.dart';
 import 'package:tekblog/component/my_string.dart';
