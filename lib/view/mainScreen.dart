@@ -6,10 +6,10 @@
 import 'package:flutter/material.dart';
 import 'package:tekblog/gen/assets.gen.dart';
 import 'package:tekblog/model/fake_data.dart';
-import 'package:tekblog/model/profile_screen.dart';
-import 'package:tekblog/model/regester_intro.dart';
-import 'package:tekblog/my_colors.dart';
-import 'package:tekblog/my_string.dart';
+import 'package:tekblog/view/profile_screen.dart';
+import 'package:tekblog/view/regester_intro.dart';
+import 'package:tekblog/component/my_colors.dart';
+import 'package:tekblog/component/my_string.dart';
 
 class Mainscreen extends StatefulWidget {
   const Mainscreen(
@@ -19,6 +19,9 @@ class Mainscreen extends StatefulWidget {
   @override
   State<Mainscreen> createState() => _MainscreenState();
 }
+
+// baray tarif kardan dokme menu baray drawer in payini ra ezafe kardim
+final GlobalKey<ScaffoldState> _key = GlobalKey();
 
 class _MainscreenState extends State<Mainscreen> {
   var selectedPageIndex = 0;
@@ -30,13 +33,75 @@ class _MainscreenState extends State<Mainscreen> {
 
     return SafeArea(
       child: Scaffold(
+        // in key baray estefade az sakhtar Global ast ke masalan dar sakhtar dokme shakhsi menudar ghesmat appbar esteade kardim
+        key: _key,
+        // ghesmat kilik bar riy icon meno
+        drawer: Drawer(
+          backgroundColor: SolidColors.scafoldBG,
+          child: Padding(
+            padding: EdgeInsets.only(right: bodyMargin, left: bodyMargin),
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  child: Image(
+                    image: AssetImage(Assets.images.startpage.path),
+                    height: size.height / 8,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "پروفایل کاربری",
+                    style: textTheme.bodyLarge,
+                  ),
+                  onTap: () {},
+                ),
+                Divider(
+                  color: SolidColors.dividercolor,
+                ),
+                ListTile(
+                  title: Text(
+                    "درباره تک‌بلاگ",
+                    style: textTheme.bodyLarge,
+                  ),
+                  onTap: () {},
+                ),
+                Divider(
+                  color: SolidColors.dividercolor,
+                ),
+                ListTile(
+                  title: Text(
+                    "اشتراک گذاری تک بلاگ",
+                    style: textTheme.bodyLarge,
+                  ),
+                  onTap: () {},
+                ),
+                Divider(
+                  color: SolidColors.dividercolor,
+                ),
+                ListTile(
+                  title: Text(
+                    "تک‌بلاگ در گیت هاب",
+                    style: textTheme.bodyLarge,
+                  ),
+                  onTap: () {},
+                ),
+              ],
+            ),
+          ),
+        ),
         appBar: AppBar(
+          // in payini baraye in ast ke icon ezafi ezafe nashavad mesl icon drawer k sakhtim
+          automaticallyImplyLeading: false,
           elevation: 0,
           backgroundColor: SolidColors.scafoldBG,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(Icons.menu),
+              InkWell(
+                  onTap: () {
+                    _key.currentState!.openDrawer();
+                  },
+                  child: Icon(Icons.menu)),
               Image(
                 image: AssetImage(Assets.images.startpage.path),
                 height: size.height / 10,

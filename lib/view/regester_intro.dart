@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tekblog/gen/assets.gen.dart';
-import 'package:tekblog/model/my_cats.dart';
-import 'package:tekblog/my_string.dart';
+import 'package:tekblog/view/my_cats.dart';
+import 'package:tekblog/component/my_string.dart';
 import 'package:validators/validators.dart';
 
 class RegesterIntro extends StatelessWidget {

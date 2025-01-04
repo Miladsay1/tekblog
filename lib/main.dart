@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:tekblog/my_colors.dart';
-import 'package:tekblog/splash_screen.dart';
+import 'package:tekblog/component/my_colors.dart';
+import 'package:tekblog/view/splash_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);

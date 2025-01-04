@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tekblog/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:tekblog/mainScreen.dart';
-import 'package:tekblog/my_colors.dart';
+import 'package:tekblog/view/mainScreen.dart';
+import 'package:tekblog/component/my_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
