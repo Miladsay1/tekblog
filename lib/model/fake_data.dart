@@ -1,6 +1,6 @@
 import 'package:tekblog/gen/assets.gen.dart';
 import 'package:tekblog/model/data_model.dart';
-import 'package:tekblog/model/podcast_model.dart';
+import 'package:tekblog/model/fake_podcastmodel.dart';
 
 Map homePagePosterMap = {
   "imageAsset": Assets.images.programming.path,
@@ -286,24 +286,24 @@ List<BlogModel> blogList = [
       views: "256")
 ];
 
-List<PodcastModel> hotPodcastList = [
-  PodcastModel(
+List<PodcastModelFake> hotPodcastList = [
+  PodcastModelFake(
     id: 1,
     title: "رمزون",
     poster: "https://uploadkon.ir/uploads/53bd28_24podcast1.png",
   ),
-  PodcastModel(
+  PodcastModelFake(
     id: 2,
     title: "رادیو کد یاد",
     poster:
         "https://uploadkon.ir/uploads/54a928_24Moonray-the-First-Bitcoin-Metaverse-Game-on-Stacks-Raises-3-5M.png",
   ),
-  PodcastModel(
+  PodcastModelFake(
     id: 3,
     title: "تکنو کست",
     poster: "https://uploadkon.ir/uploads/800b28_24Mapping-Metaverse02.png",
   ),
-  PodcastModel(
+  PodcastModelFake(
     id: 4,
     title: "پادی کست",
     poster: "https://uploadkon.ir/uploads/f1d828_24shutterstock-1982607317.png",
