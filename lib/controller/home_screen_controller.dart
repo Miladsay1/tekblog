@@ -4,6 +4,7 @@ import 'package:tekblog/component/api_constant.dart';
 import 'package:tekblog/model/article_model.dart';
 import 'package:tekblog/model/podcast_model.dart';
 import 'package:tekblog/model/poster_model.dart';
+import 'package:tekblog/model/tag_model.dart';
 import 'package:tekblog/services/dio_service.dart';
 
 class HomeScreenController extends GetxController {
@@ -29,6 +30,9 @@ class HomeScreenController extends GetxController {
       });
       response.data['top_podcasts'].forEach((element) {
         topPodcast.add(PodcastModel.fromJson(element));
+      });
+      response.data['tags'].forEach((element) {
+        tagslist.add(Tagsmodel.fromJson(element));
       });
       poster.value = PosterModel.fromJson(response.data['poster']);
       loading.value = false;

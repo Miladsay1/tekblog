@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 import 'package:tekblog/component/my_colors.dart';
+import 'package:tekblog/view/article_list_screen.dart';
+import 'package:tekblog/view/single_screen.dart';
 import 'package:tekblog/view/splash_screen.dart';
 
 void main() {
@@ -14,22 +17,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter RTL Demo',
-      // افزودن زبان‌های پشتیبانی شده
-      supportedLocales: [
-        Locale('en', ''), // انگلیسی
-        Locale('fa', ''), // فارسی
-      ],
-      // افزودن localizationsDelegates
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      // تنظیم جهت‌دهی براساس زبان
-      locale: Locale('fa', ''), // زبان پیش‌فرض
-
+    return GetMaterialApp(
+      // taghir dadim be frsi saz khod getx
+      locale: Locale("fa"),
       theme: ThemeData(
           // them baray ghesmat hayi k gharare karbar chizi vared kone
           inputDecorationTheme: InputDecorationTheme(

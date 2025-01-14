@@ -65,6 +65,10 @@ class $AssetsImagesGen {
   AssetGenImage get shutterstock1982607317 =>
       const AssetGenImage('assets/images/shutterstock_1982607317.png');
 
+  /// File path: assets/images/single_place_holder.jpg
+  AssetGenImage get singlePlaceHolder =>
+      const AssetGenImage('assets/images/single_place_holder.jpg');
+
   /// File path: assets/images/startpage.png
   AssetGenImage get startpage =>
       const AssetGenImage('assets/images/startpage.png');
@@ -87,6 +91,7 @@ class $AssetsImagesGen {
         podcast1,
         programming,
         shutterstock1982607317,
+        singlePlaceHolder,
         startpage,
         user
       ];
