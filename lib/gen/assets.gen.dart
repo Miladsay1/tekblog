@@ -32,6 +32,42 @@ class $AssetsImagesGen {
       const AssetGenImage(
           'assets/images/Moonray-the-First-Bitcoin-Metaverse-Game-on-Stacks-Raises-3.5M.png');
 
+  /// File path: assets/images/Screenshot_1.png
+  AssetGenImage get screenshot1 =>
+      const AssetGenImage('assets/images/Screenshot_1.png');
+
+  /// File path: assets/images/Screenshot_2.png
+  AssetGenImage get screenshot2 =>
+      const AssetGenImage('assets/images/Screenshot_2.png');
+
+  /// File path: assets/images/Screenshot_3.png
+  AssetGenImage get screenshot3 =>
+      const AssetGenImage('assets/images/Screenshot_3.png');
+
+  /// File path: assets/images/Screenshot_4.png
+  AssetGenImage get screenshot4 =>
+      const AssetGenImage('assets/images/Screenshot_4.png');
+
+  /// File path: assets/images/Screenshot_5.png
+  AssetGenImage get screenshot5 =>
+      const AssetGenImage('assets/images/Screenshot_5.png');
+
+  /// File path: assets/images/Screenshot_6.png
+  AssetGenImage get screenshot6 =>
+      const AssetGenImage('assets/images/Screenshot_6.png');
+
+  /// File path: assets/images/Screenshot_7.png
+  AssetGenImage get screenshot7 =>
+      const AssetGenImage('assets/images/Screenshot_7.png');
+
+  /// File path: assets/images/Screenshot_8.png
+  AssetGenImage get screenshot8 =>
+      const AssetGenImage('assets/images/Screenshot_8.png');
+
+  /// File path: assets/images/Screenshot_9.png
+  AssetGenImage get screenshot9 =>
+      const AssetGenImage('assets/images/Screenshot_9.png');
+
   /// File path: assets/images/avatarIcon.png
   AssetGenImage get avatarIcon =>
       const AssetGenImage('assets/images/avatarIcon.png');
@@ -94,6 +130,15 @@ class $AssetsImagesGen {
         iconsafheAvalMaghalat,
         mappingMetaverse02,
         moonrayTheFirstBitcoinMetaverseGameOnStacksRaises35M,
+        screenshot1,
+        screenshot2,
+        screenshot3,
+        screenshot4,
+        screenshot5,
+        screenshot6,
+        screenshot7,
+        screenshot8,
+        screenshot9,
         avatarIcon,
         felesh,
         hastag,
