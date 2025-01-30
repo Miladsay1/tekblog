@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import 'package:tekblog/component/my_colors.dart';
 import 'package:tekblog/component/text_style.dart';
 import 'package:url_launcher/url_launcher.dart';

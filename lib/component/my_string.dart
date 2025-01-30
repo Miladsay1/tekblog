@@ -8,6 +8,9 @@ class MyString {
 
 برای ارسال مطلب و پادکست باید حتما 
 ثبت نام کنی """;
+  static const matnsafheAvalModiriatMaghalat =
+      """هنوز هیچ مقاله ای به جامعه گیک های فارسی 
+اضافه نکردی !!!""";
   static const myCatsPage = """تبریک میگم ، ایمیل با موفقیت تایید شد
 لطفا اطلاعات ثبت نام رو کامل کن""";
   static const shareText = """

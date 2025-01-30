@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+
+import 'package:tekblog/controller/regester_controller.dart';
 import 'package:tekblog/gen/assets.gen.dart';
-import 'package:tekblog/view/my_cats.dart';
+
 import 'package:tekblog/component/my_string.dart';
 import 'package:validators/validators.dart';
 
+// ignore: must_be_immutable
 class RegesterIntro extends StatelessWidget {
-  const RegesterIntro({super.key});
+  RegesterIntro({super.key});
 
+  var regesterController = Get.find<RegesterController>();
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -81,6 +86,8 @@ class RegesterIntro extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(bodyMargin, size.height / 28,
                           bodyMargin, size.height / 28),
                       child: TextField(
+                          controller:
+                              regesterController.emailTextEditingController,
                           onChanged: (value) {
                             isEmail(value);
                           },
@@ -92,6 +99,9 @@ class RegesterIntro extends StatelessWidget {
                     ),
                     ElevatedButton(
                         onPressed: () {
+                          Get.snackbar("", "کد فعالسازی ارسال شد");
+                          // ejra function register az dio servis va register controller
+                          regesterController.registr();
                           Navigator.pop(context);
                           _activatedBottomSheet(
                               context, size, textTheme, bodyMargin);
@@ -135,6 +145,8 @@ class RegesterIntro extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(bodyMargin, size.height / 28,
                           bodyMargin, size.height / 28),
                       child: TextField(
+                          controller:
+                              regesterController.activitedTextEditingController,
                           onChanged: (value) {
                             isEmail(value);
                           },
@@ -146,9 +158,10 @@ class RegesterIntro extends StatelessWidget {
                     ),
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (context) => MyCats()));
+                          regesterController.verify();
+                          // Navigator.of(context).pushReplacement(
+                          //     MaterialPageRoute(
+                          //         builder: (context) => MyCats()));
                         },
                         child: Text("ادامه", style: textTheme.headlineLarge))
                   ],

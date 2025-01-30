@@ -11,13 +11,14 @@ import 'package:share_plus/share_plus.dart';
 import 'package:tekblog/component/my_coponent.dart';
 import 'package:tekblog/controller/home_screen_controller.dart';
 import 'package:tekblog/controller/list_article_cotroller.dart';
+import 'package:tekblog/controller/regester_controller.dart';
 import 'package:tekblog/controller/single_article_cotroller.dart';
 import 'package:tekblog/gen/assets.gen.dart';
-import 'package:tekblog/model/article_info_model.dart';
+
 import 'package:tekblog/model/fake_data.dart';
-import 'package:tekblog/view/article_list_screen.dart';
+import 'package:tekblog/view/article/article_list_screen.dart';
 import 'package:tekblog/view/profile_screen.dart';
-import 'package:tekblog/view/regester_intro.dart';
+import 'package:tekblog/view/regester/regester_intro.dart';
 import 'package:tekblog/component/my_colors.dart';
 import 'package:tekblog/component/my_string.dart';
 
@@ -199,7 +200,9 @@ class NavigitorBottonHomepage extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: (() => changeScreen(2)),
+                  onPressed: () {
+                    Get.find<RegesterController>().togglelogain();
+                  },
                   icon: Image(
                     image: AssetImage(
                       Assets.images.par.path,
@@ -225,6 +228,7 @@ class NavigitorBottonHomepage extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({
     super.key,
@@ -266,7 +270,6 @@ class HomeScreen extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            ;
                             Get.to(ArticleListScreen(title: "مقالات جدید"));
                           },
                           child: Text(

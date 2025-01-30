@@ -2,20 +2,18 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:tekblog/component/my_colors.dart';
 import 'package:tekblog/component/my_coponent.dart';
-import 'package:tekblog/component/text_style.dart';
 import 'package:tekblog/controller/list_article_cotroller.dart';
 import 'package:tekblog/controller/single_article_cotroller.dart';
-import 'package:tekblog/view/single_screen.dart';
 
+// ignore: must_be_immutable
 class ArticleListScreen extends StatelessWidget {
   String title;
 
-  ArticleListScreen({required this.title, Key? key}) : super(key: key);
+  ArticleListScreen({required this.title, super.key});
 
-  ListArticleCotroller ListArticleController = Get.put(ListArticleCotroller());
+  ListArticleCotroller listArticleController = Get.put(ListArticleCotroller());
   SingleArticleCotroller singleArticleCotroller =
       Get.put(SingleArticleCotroller());
 
@@ -33,12 +31,13 @@ class ArticleListScreen extends StatelessWidget {
           child: Obx(
             () => ListView.builder(
               scrollDirection: Axis.vertical,
-              itemCount: ListArticleController.articleList.length,
+              itemCount: listArticleController.articleList.length,
               itemBuilder: (context, index) {
                 return GestureDetector(
-                  onTap: () {
-                    singleArticleCotroller.getArticleInfo(
-                        ListArticleController.articleList[index].id);
+                  onTap: () async {
+                    await singleArticleCotroller.getArticleInfo(
+                        listArticleController.articleList[index].id);
+                    Get.toNamed("/SingleScreen");
                   },
                   child: Padding(
                     padding: EdgeInsets.all(bodyMargin / 5),
@@ -49,7 +48,7 @@ class ArticleListScreen extends StatelessWidget {
                             width: size.width / 3,
                             height: size.height / 6,
                             child: CachedNetworkImage(
-                              imageUrl: ListArticleController
+                              imageUrl: listArticleController
                                   .articleList[index].image!,
                               imageBuilder: (context, imageProvider) {
                                 return Container(
@@ -83,7 +82,7 @@ class ArticleListScreen extends StatelessWidget {
                               SizedBox(
                                 width: size.width / 2,
                                 child: Text(
-                                  ListArticleController
+                                  listArticleController
                                       .articleList[index].title!,
                                   style: textTheme.bodyLarge,
                                   overflow: TextOverflow.ellipsis,
@@ -98,7 +97,7 @@ class ArticleListScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    ListArticleController
+                                    listArticleController
                                         .articleList[index].author!,
                                     style: TextStyle(color: Colors.black),
                                   ),
@@ -106,7 +105,7 @@ class ArticleListScreen extends StatelessWidget {
                                     width: 20,
                                   ),
                                   Text(
-                                    "${ListArticleController.articleList[index].view!}  بازدید",
+                                    "${listArticleController.articleList[index].view!}  بازدید",
                                     style: TextStyle(color: Colors.black),
                                   ),
                                 ],

@@ -14,6 +14,7 @@ class ApiUrlConstant {
   static const podcastFiles =
       "${baseUrl}podcast/get.php?command=get_files&podcats_id=";
   static const postPodcast = "${baseUrl}podcast/post.php";
+  // ignore: constant_identifier_names
   static const PublishedByMePodcast =
       "${baseUrl}podcast/get.php?command=published_by_me&user_id=";
 }

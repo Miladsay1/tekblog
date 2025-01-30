@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tekblog/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:tekblog/view/mainScreen.dart';
 import 'package:tekblog/component/my_colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,13 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3)).then((value) {
-      var size = MediaQuery.of(context).size;
-      var textTheme = Theme.of(context).textTheme;
-      double bodyMargin = size.width / 12;
-      // ignore: use_build_context_synchronously
-      Navigator.of(context).pushReplacement((MaterialPageRoute(
-          builder: (context) =>
-              Mainscreen(context, size, textTheme, bodyMargin))));
+      Get.offAndToNamed('/Mainscreen');
     });
 
     super.initState();

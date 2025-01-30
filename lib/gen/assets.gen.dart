@@ -19,6 +19,10 @@ class $AssetsImagesGen {
   SvgGenImage get iconsabtnam =>
       const SvgGenImage('assets/images/Iconsabtnam.svg');
 
+  /// File path: assets/images/IconsafheAvalMaghalat.svg
+  SvgGenImage get iconsafheAvalMaghalat =>
+      const SvgGenImage('assets/images/IconsafheAvalMaghalat.svg');
+
   /// File path: assets/images/Mapping-Metaverse02.png
   AssetGenImage get mappingMetaverse02 =>
       const AssetGenImage('assets/images/Mapping-Metaverse02.png');
@@ -45,6 +49,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/iconghalam.png
   AssetGenImage get iconghalam =>
       const AssetGenImage('assets/images/iconghalam.png');
+
+  /// File path: assets/images/modiriatMaghaleIcon.svg
+  SvgGenImage get modiriatMaghaleIcon =>
+      const SvgGenImage('assets/images/modiriatMaghaleIcon.svg');
+
+  /// File path: assets/images/modiriatpodcastIcon.svg
+  SvgGenImage get modiriatpodcastIcon =>
+      const SvgGenImage('assets/images/modiriatpodcastIcon.svg');
 
   /// File path: assets/images/padcost_icon.png
   AssetGenImage get padcostIcon =>
@@ -79,6 +91,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
         iconsabtnam,
+        iconsafheAvalMaghalat,
         mappingMetaverse02,
         moonrayTheFirstBitcoinMetaverseGameOnStacksRaises35M,
         avatarIcon,
@@ -86,6 +99,8 @@ class $AssetsImagesGen {
         hastag,
         homeicon,
         iconghalam,
+        modiriatMaghaleIcon,
+        modiriatpodcastIcon,
         padcostIcon,
         par,
         podcast1,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+
 import 'package:share_plus/share_plus.dart';
 import 'package:tekblog/component/my_colors.dart';
 import 'package:tekblog/component/my_string.dart';
@@ -12,14 +12,14 @@ import 'package:tekblog/controller/home_screen_controller.dart';
 import 'package:tekblog/controller/list_article_cotroller.dart';
 import 'package:tekblog/controller/single_article_cotroller.dart';
 import 'package:tekblog/gen/assets.gen.dart';
-import 'package:tekblog/model/fake_data.dart';
-import 'package:tekblog/view/article_list_screen.dart';
 
+import 'package:tekblog/view/article/article_list_screen.dart';
+
+// ignore: must_be_immutable
 class SingleScreen extends StatelessWidget {
   SingleScreen({super.key});
 
-  SingleArticleCotroller singleArticleCotroller =
-      Get.put(SingleArticleCotroller());
+  var singleArticleCotroller = Get.find<SingleArticleCotroller>();
 
   HomeScreenController homeScreenController = Get.put(HomeScreenController());
 
